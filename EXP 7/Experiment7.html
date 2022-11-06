@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#c5').hide()
+            $('#d5').click(function(){
+                $('#c1').hide(200)
+                $('#c5').show(200)
+                
+            })
+            $('#c6').hide()
+            $('#d6').click(function(){
+                $('#c2').hide(200)
+                $('#c6').show(200)
+
+            })
+            $('#c7').hide()
+            $('#d7').click(function(){
+                $('#c3').hide(200)
+                $('#c7').show(200)
+
+            })
+            $('#c8').hide()
+            $('#d8').click(function(){
+                $('#c4').hide(200)
+                $('#c8').show(200)
+
+            })       
+            
+            
+            function fun() {
+                // var r = Math.floor(Math.random() * 700)
+                // var c = Math.floor(Math.random() * 10)
+                function fun1() {
+                    let car=$('#c5')
+                    let r = Math.floor(Math.random() * 200)
+                    let c = Math.floor(Math.random() * 5)
+                    let s = Math.floor(Math.random() * 200)
+                    
+                    car.animate({left:'+='+(800-s), top:r-c},700)
+                    // car1.animate({top:r-c},1)
+                    
+                    if (car.position().left >= 2580 || car.position().top >= 750 || car.position().top < 1) {
+                        car.hide()
+                    }
+                }
+                setInterval(fun1,1)
+
+                function fun2() {
+                    let car=$('#c6')
+                    let r = Math.floor(Math.random() * 200)
+                    let c = Math.floor(Math.random() * 5)
+                    let s = Math.floor(Math.random() * 200)
+                    
+                    car.animate({left:'+='+(800-s), top:r-c},700)
+                    // car1.animate({top:r-c},1)
+                    
+                    if (car.position().left >= 2580 || car.position().top >= 750 || car.position().top < 1) {
+                        car.hide()
+                    }
+                }
+                setInterval(fun2,1)
+
+                function fun3() {
+                    let car=$('#c7')
+                    let r = Math.floor(Math.random() * 200)
+                    let c = Math.floor(Math.random() * 5)
+                    let s = Math.floor(Math.random() * 200)
+                    
+                    car.animate({left:'+='+(800-s), top:r-c},700)
+                    // car1.animate({top:r-c},1)
+                    
+                    if (car.position().left >= 2580 || car.position().top >= 750 || car.position().top < 1) {
+                        car.hide()
+                    }
+                }
+                setInterval(fun3,1)
+
+                function fun4() {
+                    let car=$('#c8')
+                    let r = Math.floor(Math.random() * 200)
+                    let c = Math.floor(Math.random() * 5)
+                    let s = Math.floor(Math.random() * 200)
+                    
+                    car.animate({left:'+='+(800-s), top:'+='+(c-r)},700)
+                    // car1.animate({top:r-c},1)
+                    
+                    if (car.position().left >= 2580 || car.position().top >= 750 || car.position().top < 1) {
+                        car.hide()
+                    }
+                }
+                setInterval(fun4,1)
+                
+            }
+
+            $('#b1').click(function(){
+                a=setInterval(fun, 10)
+            })
+            $('#b2').click(function(){
+                window.location.href = "http://10.3.3.44:5500/index(1).html";
+
+            })
+        })
+
+    </script>
+    
+</head>
+<body bgcolor="black">
+    <div id="d1" style="width: 100%;height:200px;border-bottom:20px white dashed;background-color:black;border-top:20px rgb(255, 213, 0) solid;"><img src="c1.png" id="c5" align=center style="height:170px;position: absolute;left:5px;top:30px;"></div>
+    <div id="d2" style="width: 100%;height:200px;border-bottom:20px white dashed;background-color:black;"><img src="c2.png" id="c6" align=center style="height:170px;position: absolute;left:5px;top:250px;"></div>
+    <div id="d3" style="width: 100%;height:200px;border-bottom:20px white dashed;background-color:black;"><img src="c3.png" id="c7" align=center style="height:170px;position: absolute;left:5px;top:490px;"></div>
+    <div id="d4" style="width: 100%;height:200px;border-bottom:20px rgb(255, 213, 0) solid;background-color:black;"><img src="c1.png" id="c8" align=center style="height:170px;position: absolute;left:5px;top:700px;"></div><br>
+    <div id="but" align="center"><input type="button" value="Start" id="b1" style="width: 150px;height: 75px; color:red; background-color:yellow; font-size: xx-large;"></div>
+    <div id="d5" style="width:24.4%;height:200px;border:5px blue solid;display: inline-block;padding-top: 15px;"><img src="c1.png" id="c1" align=center style="height:170px;"></div>
+    <div id="d6" style="width:24.4%;height:200px;border:5px blue solid;display: inline-block;padding-top: 15px;"><img src="c2.png" id="c2" align=center style="height:170px;"></div>
+    <div id="d7" style="width:24.4%;height:200px;border:5px blue solid;display: inline-block;padding-top: 15px;"><img src="c3.png" id="c3" align=center style="height:170px;"></div>
+    <div id="d8" style="width:24.4%;height:200px;border:5px blue solid;display: inline-block;padding-top: 15px;"><img src="c1.png" id="c4" align=center style="height:170px;"></div>
+    <br><br>
+    <div id="but" align="center"><input type="button" value="Next" id="b2" style="width: 150px;height: 75px; color:red; background-color:yellow; font-size: xx-large;"></div>
+</body>
+</html>
