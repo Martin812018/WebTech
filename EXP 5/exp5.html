@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="guild_logo.jpg" type="image/icon type">
+    <script src="script.js"></script>
+    <title>Experiment 5</title>
+
+    <style>
+        body {background-color: black;
+            color: #C724B1;
+        }
+
+        p {
+            border-style: groove;
+            width: 175.200px;
+            height: 25px;
+            display: inline-block;
+            padding: 1px 2px;
+            border-width: 1px;
+            margin: 0px;
+        }
+
+        input {
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6" style="border-style:groove;">
+                <fieldset>
+                    <legend>Shortest Longest Word</legend>
+                    String: <input id="SLW" type="text">
+                    <button onclick="SLWfunc()">Submit</button> <br>
+                    Output: <br>Min: &nbsp;<p id="outputmin"></p><br>
+                    Max:&nbsp;<p id="outputmax"></p>
+                </fieldset>
+            </div>
+            <div class="col-6" style="border-style:groove;">
+                <fieldset>
+                    <legend>BMI Calculator</legend>
+                    Height: <input id="BMIh" type="text">
+                    <select name="metrics" id="metrics">
+                        <option value="m">Meters</option>
+                        <option value="cm">Centimeters</option>
+                    </select><br>
+                    Weight: <input id="BMIw" type="text"><br>
+                    <button onclick="BMI()">Submit</button> <br>
+                    BMI: &nbsp;<p id="outputBMI"></p>
+                    <span id="oBMI"></span>
+                </fieldset>
+            </div>
+            <div class="col-12" style="border-style:groove;">
+                <fieldset>
+                    <legend>Fruit Farm</legend>
+                    Rows: <input id="row" type="text">
+                    <br>
+                    Columns: <input id="column" type="text"><br>
+                    <button onclick="grow()">Submit</button> <br> <br>
+                    Fruit Farm: <br>
+                    <div id="garden"></div>
+                </fieldset>
+            </div>
+            <div class="col-6" style="border-style:groove;">
+                <fieldset>
+                    <legend>Currency Convertor</legend>
+                    Currency 1: <input id="currA" type="text">
+                    <select name="curr1" id="curr1">
+                        <option value="u">USD $</option>
+                        <option value="c">Cents</option>
+                        <option value="r">Rupees ₹</option>
+                        <option value="p">Paise</option>
+                    </select><br><br>
+                    Currency 2: <p id="currB"></p>
+                    <select name="curr2" id="curr2">
+                        <option value="u">USD $</option>
+                        <option value="c">Cents</option>
+                        <option value="r">Rupees ₹</option>
+                        <option value="p">Paise</option>
+                    </select><br><br>
+                    <button onclick="convert()">Submit</button> <br>
+                </fieldset>
+            </div>
+            <div class="col-6" style="border-style:groove;">
+                <fieldset>
+                    <legend>Flip Coin</legend>
+                    <img id="coin" src="Tail.jpg" alt="" width="100" height="100">
+                    <div><button onclick="flip()">Flip</button>
+                        <button onclick="reset()">Reset</button> <br> <br>
+                    </div>
+
+                    Tail Count: <span id="tc">0</span><br>
+                    Head Count: <span id="hc">0</span><br><br>
+                </fieldset>
+            </div>
+            <!--
+    1/2kg=100
+    1kg=200
+    2kg=400
+    tax=9%
+    tip=10-20% of total bill after tax
+    -->
+            <div class="col-12" style="border-style:groove;">
+                <fieldset>
+                    <legend>World Cake Order!!</legend>
+                    <form action="" id="order" onsubmit="TotalBill();return false">
+                        Order(0.5 or integers): <input type="text" name="Order" id="weight" required> Kg of
+                        <select name="Cakes" id="cake" value>
+                            <option value="True">Choose your delicacies..</option>
+                            <option value="Choco Truffle">Choco Truffle</option>
+                            <option value="Red Velvet">Red Velvet</option>
+                            <option value="Pinneaple">Pinneaple</option>
+                        </select><span id="invalid"></span><br>
+                        Tip(10=>20) <input type="range" id="tip" min="10" max="20" step="1" value="10">
+                        <span>% of total bill</span><br><br>
+                        <button type="submit">Place Order</button>
+                        <button type="reset">Reset</button>
+                    </form>
+
+                    Bill Split: <div id="bill"></div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
